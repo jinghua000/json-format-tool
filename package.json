@@ -2,8 +2,11 @@
   "name": "json-format-tool",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "bin": {
+    "json-format-tool": "bin/index.js"
+  },
   "scripts": {
+    "demo": "json-format-tool",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/jinghua000/json-format-tool/issues"
   },
-  "homepage": "https://github.com/jinghua000/json-format-tool#readme"
+  "homepage": "https://github.com/jinghua000/json-format-tool#readme",
+  "dependencies": {
+    "commander": "^4.0.1"
+  }
 }
