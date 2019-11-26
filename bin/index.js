@@ -1,30 +1,34 @@
 #!/usr/bin/env node	
 
 const version = require('../package').version
-const program = require('commander')
+// const program = require('commander')
+// const minimist = require('minimist')
 
-program
-  .version(version, '-v, --version')
-  .usage('[options]')
-  .option('-n, --no-sort', 'not need sort')
-  .option('-i, --indent <num>', 'indent for json', 2)
+// program
+//   .version(version, '-v, --version')
+//   .usage('[options]')
+//   .option('-n, --no-sort', 'not need sort')
+//   .option('-i, --indent <num>', 'indent for json', 2)
 
-program
-  .arguments('<command>')
-  .action((cmd) => {
-    // console.log(cmd)
-    program.outputHelp()
-  })
+// // program
+// //   .arguments('<command>')
+// //   .action((cmd) => {
+// //     console.log(cmd)
+// //     program.outputHelp()
+// //   })
 
-if (!process.argv.slice(2).length) {
-  program.outputHelp()
-}
+// if (!process.argv.slice(2).length) {
+//   program.outputHelp()
+// }
 
-program.parse(process.argv)
+// program.parse(process.argv)
 
-// console.log(program.indent)
-// console.log(program.sort)
+// // console.log(program.indent)
+// // console.log(program.sort)
 
-if (program.sort === false) {
+// if (program.sort === false) {
 
-}
+// }
+
+console.log(process.stdin.isTTY)
+console.log(process.argv)
