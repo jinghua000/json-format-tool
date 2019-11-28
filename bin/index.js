@@ -1,34 +1,32 @@
 #!/usr/bin/env node	
 
 const version = require('../package').version
-// const program = require('commander')
-// const minimist = require('minimist')
+const program = require('commander')
+const chalk = require('chalk')
+const log = console.log.bind(console)
+const helper = program.outputHelp.bind(program)
 
-// program
-//   .version(version, '-v, --version')
-//   .usage('[options]')
-//   .option('-n, --no-sort', 'not need sort')
-//   .option('-i, --indent <num>', 'indent for json', 2)
+const CLI_NAME = 'json-format-tool'
 
-// // program
-// //   .arguments('<command>')
-// //   .action((cmd) => {
-// //     console.log(cmd)
-// //     program.outputHelp()
-// //   })
+program
+  .version(version, '-v, --version')
+  .name(CLI_NAME)
+  .usage('[options] <json-file> ' + chalk.yellow('OR') + ` <output-some-json> | ${CLI_NAME}`)
+  .option('-n, --no-sort', 'not need sort keys')
+  .option('-i, --indent <num>', 'indent for json', 2)
+  .action((cmd, obj = []) => {
+    if (!obj.length && process.stdin.isTTY) {
+      log(chalk.cyan('Try format your JSON!\n'))
+      helper()
+    }
 
-// if (!process.argv.slice(2).length) {
-//   program.outputHelp()
-// }
+    if (obj.length > 1) {
+      log(chalk.yellow('ERROR: More than one file supplied!\n'))
+      helper()
+      process.exit(1)
+    }
 
-// program.parse(process.argv)
-
-// // console.log(program.indent)
-// // console.log(program.sort)
-
-// if (program.sort === false) {
-
-// }
-
-console.log(process.stdin.isTTY)
-console.log(process.argv)
+    // process.stdin.isTTY ? 
+  })
+  
+program.parse(process.argv)

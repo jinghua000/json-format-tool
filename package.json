@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/jinghua000/json-format-tool#readme",
   "dependencies": {
-    "commander": "^4.0.1",
-    "minimist": "^1.2.0"
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1"
   }
 }
