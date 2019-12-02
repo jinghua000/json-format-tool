@@ -3,9 +3,13 @@
 const version = require('../package').version
 const program = require('commander')
 const chalk = require('chalk')
-const { formatFileJSON, formatStdinJSON } = require('../lib')
+const { formatFileJSON, formatStdinJSON, printError } = require('../lib')
 
 const CLI_NAME = 'json-format-tool'
+const exit = () => {
+  program.outputHelp()
+  process.exit(1)
+}
 
 program
   .version(version, '-v, --version')
@@ -17,12 +21,16 @@ program
   .action((cmd, args = []) => {
     if (!args.length && process.stdin.isTTY) {
       console.log(chalk.cyan('Try format your JSON!\n'))
-      program.outputHelp()
-      process.exit(1)
+      exit()
+    }
+
+    if (args.length > 1) {
+      printError('more than one file supplied!')
+      exit()
     }
 
     process.stdin.isTTY 
-      ? formatFileJSON(args, cmd)
+      ? formatFileJSON(args[0], cmd)
       : formatStdinJSON(cmd)
   })
   
