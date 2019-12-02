@@ -6,8 +6,7 @@
     "json-format-tool": "bin/index.js"
   },
   "scripts": {
-    "demo": "json-format-tool",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo 'no test'"
   },
   "repository": {
     "type": "git",
