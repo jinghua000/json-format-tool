@@ -15,7 +15,7 @@ program
   .version(version, '-v, --version')
   .name(CLI_NAME)
   .usage('[options] <json-file> ' + chalk.yellow('OR') + ` <output-json> | ${CLI_NAME}`)
-  .option('-r, --replace', 'replace the file directly, only <json-file> mode')
+  .option('-r, --replace', 'replace the file directly, only works in <json-file> mode')
   .option('-i, --indent <num>', 'indent for json', 2)
   .option('--no-sort', 'not need sort keys')
   .action((cmd, args = []) => {

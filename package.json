@@ -1,7 +1,7 @@
 {
   "name": "json-format-tool",
   "version": "0.0.1",
-  "description": "",
+  "description": "Tiny JSON formatter!",
   "bin": {
     "json-format-tool": "bin/index.js"
   },
@@ -13,7 +13,9 @@
     "url": "git+https://github.com/jinghua000/json-format-tool.git"
   },
   "keywords": [
-    "json"
+    "json",
+    "formatter",
+    "cli"
   ],
   "author": "shadow",
   "license": "MIT",
