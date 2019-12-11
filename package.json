@@ -6,7 +6,7 @@
     "json-format-tool": "bin/index.js"
   },
   "scripts": {
-    "test": "echo 'no test'"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,8 @@
     "chalk": "^3.0.0",
     "commander": "^4.0.1",
     "json-stable-stringify": "^1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.2"
   }
 }
