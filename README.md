@@ -1,5 +1,7 @@
 # json-format-tool
 
+[![Build Status](https://travis-ci.org/jinghua000/json-format-tool.svg?branch=master)](https://travis-ci.org/jinghua000/json-format-tool)
+
 ## Introduction
 
 Okay, this is a tiny cli-tool for format JSON.
