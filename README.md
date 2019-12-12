@@ -60,7 +60,7 @@ you can use the pipe operator.
 curl -X GET http://127.0.0.1:3000/my-api | json-format-tool
 ```
 
-Other options you can check inside cli tool also.
+Other options you can check inside the cli tool.
 
 ```bash
 json-format-tool -h
@@ -79,4 +79,4 @@ Options:
 
 ## Internal
 
-Sort JSON keys based on json-stable-stringify.
+Sort JSON keys based on [json-stable-stringify](https://www.npmjs.com/package/json-stable-stringify).
