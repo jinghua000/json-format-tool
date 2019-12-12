@@ -58,7 +58,7 @@ you can use the pipe operator.
 curl -X GET http://127.0.0.1:3000/my-api | json-format-tool
 ```
 
-Other options you can check in cli tool also
+Other options you can check inside cli tool also.
 
 ```bash
 json-format-tool -h
