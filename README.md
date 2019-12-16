@@ -1,5 +1,6 @@
 # json-format-tool
 
+[![npm module](https://badge.fury.io/js/json-format-tool.svg)](https://www.npmjs.com/package/json-format-tool)
 [![Build Status](https://travis-ci.org/jinghua000/json-format-tool.svg?branch=master)](https://travis-ci.org/jinghua000/json-format-tool)
 
 ## Introduction
