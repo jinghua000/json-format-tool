@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/jinghua000/json-format-tool#readme",
   "dependencies": {
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "commander": "^4.0.1",
     "json-stable-stringify": "^1.0.1"
   },
